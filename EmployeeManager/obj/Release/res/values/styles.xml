@@ -1,0 +1,1 @@
+<resources><!-- Custom Light Theme --><style name="CustomLightTheme" parent="android:Theme.Holo.NoActionBar"><!-- Override the app bar color --><item name="android:colorPrimary">@color/my_red</item><item name="android:windowBackground">@color/my_light_blue</item><!-- Override the color of UI controls --><item name="android:colorAccent">@color/my_green</item></style></resources>
