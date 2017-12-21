@@ -32,7 +32,6 @@ namespace EmployeeManager
 
             CreateListOfEmployees();
 
-            //btnAddEmployee.TranslationX = -100f;
         }
 
         private void BtnAddEmployee_Click(object sender, System.EventArgs e)
