@@ -12,13 +12,14 @@
         android:layout_height="50sp">
         <TextView
             android:text="Employees"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textSize="22sp"
             android:textColor="#fff"
             android:gravity="center_vertical"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
+            android:id="@+id/textEmployees"
             android:layout_weight="1" />
         <LinearLayout
             android:orientation="horizontal"

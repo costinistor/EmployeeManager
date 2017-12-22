@@ -149,8 +149,8 @@ namespace EmployeeManager
 			// aapt resource value: 0x7f080000
 			public const int actionBar = 2131230720;
 			
-			// aapt resource value: 0x7f080015
-			public const int btnAddEmployee = 2131230741;
+			// aapt resource value: 0x7f080016
+			public const int btnAddEmployee = 2131230742;
 			
 			// aapt resource value: 0x7f08000d
 			public const int btnDeleteEmployee = 2131230733;
@@ -173,11 +173,11 @@ namespace EmployeeManager
 			// aapt resource value: 0x7f080011
 			public const int employeeInfoName = 2131230737;
 			
-			// aapt resource value: 0x7f08001a
-			public const int employeeName = 2131230746;
-			
 			// aapt resource value: 0x7f08001b
-			public const int employeeOccupation = 2131230747;
+			public const int employeeName = 2131230747;
+			
+			// aapt resource value: 0x7f08001c
+			public const int employeeOccupation = 2131230748;
 			
 			// aapt resource value: 0x7f080005
 			public const int inputEmployeeBirthday = 2131230725;
@@ -200,26 +200,29 @@ namespace EmployeeManager
 			// aapt resource value: 0x7f080008
 			public const int inputEmployeeSalary = 2131230728;
 			
-			// aapt resource value: 0x7f080019
-			public const int linearLayout1 = 2131230745;
+			// aapt resource value: 0x7f08001a
+			public const int linearLayout1 = 2131230746;
 			
-			// aapt resource value: 0x7f080013
-			public const int linearLayout2 = 2131230739;
-			
-			// aapt resource value: 0x7f080017
-			public const int listEmployees = 2131230743;
+			// aapt resource value: 0x7f080014
+			public const int linearLayout2 = 2131230740;
 			
 			// aapt resource value: 0x7f080018
-			public const int logoName = 2131230744;
+			public const int listEmployees = 2131230744;
 			
-			// aapt resource value: 0x7f080016
-			public const int noEmployeeInList = 2131230742;
+			// aapt resource value: 0x7f080019
+			public const int logoName = 2131230745;
+			
+			// aapt resource value: 0x7f080017
+			public const int noEmployeeInList = 2131230743;
 			
 			// aapt resource value: 0x7f08000f
 			public const int scrollView1 = 2131230735;
 			
-			// aapt resource value: 0x7f080014
-			public const int searchEmployee = 2131230740;
+			// aapt resource value: 0x7f080015
+			public const int searchEmployee = 2131230741;
+			
+			// aapt resource value: 0x7f080013
+			public const int textEmployees = 2131230739;
 			
 			// aapt resource value: 0x7f080009
 			public const int textView1 = 2131230729;

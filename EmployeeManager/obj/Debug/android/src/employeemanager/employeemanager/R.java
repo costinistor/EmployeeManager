@@ -39,7 +39,7 @@ public final class R {
     public static final class id {
         public static final int InfoEmployeeContainer=0x7f080010;
         public static final int actionBar=0x7f080000;
-        public static final int btnAddEmployee=0x7f080015;
+        public static final int btnAddEmployee=0x7f080016;
         public static final int btnDeleteEmployee=0x7f08000d;
         public static final int btnEditEmployee=0x7f08000e;
         public static final int btnSaveEmployee=0x7f080002;
@@ -47,8 +47,8 @@ public final class R {
         public static final int categoryName=0x7f08000c;
         public static final int createOrEditEmployee=0x7f080001;
         public static final int employeeInfoName=0x7f080011;
-        public static final int employeeName=0x7f08001a;
-        public static final int employeeOccupation=0x7f08001b;
+        public static final int employeeName=0x7f08001b;
+        public static final int employeeOccupation=0x7f08001c;
         public static final int inputEmployeeBirthday=0x7f080005;
         public static final int inputEmployeeEmail=0x7f08000b;
         public static final int inputEmployeeHireDate=0x7f080006;
@@ -56,13 +56,14 @@ public final class R {
         public static final int inputEmployeeOccupation=0x7f080007;
         public static final int inputEmployeePhone=0x7f08000a;
         public static final int inputEmployeeSalary=0x7f080008;
-        public static final int linearLayout1=0x7f080019;
-        public static final int linearLayout2=0x7f080013;
-        public static final int listEmployees=0x7f080017;
-        public static final int logoName=0x7f080018;
-        public static final int noEmployeeInList=0x7f080016;
+        public static final int linearLayout1=0x7f08001a;
+        public static final int linearLayout2=0x7f080014;
+        public static final int listEmployees=0x7f080018;
+        public static final int logoName=0x7f080019;
+        public static final int noEmployeeInList=0x7f080017;
         public static final int scrollView1=0x7f08000f;
-        public static final int searchEmployee=0x7f080014;
+        public static final int searchEmployee=0x7f080015;
+        public static final int textEmployees=0x7f080013;
         public static final int textView1=0x7f080009;
         public static final int textView2=0x7f080012;
     }
