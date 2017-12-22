@@ -20,7 +20,7 @@ namespace EmployeeManager
         List<EmployeeList> mEmployees = new List<EmployeeList>();
         ListView mEmployeesList;
 
-        public static int id;
+        public static int idEmployeeSelected;
         string searchForEmployees = "";
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -95,9 +95,10 @@ namespace EmployeeManager
         // Employee clicked from the list to open the employee information
         private void EmployeesList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            id = mEmployees[e.Position].Id;
+            idEmployeeSelected = mEmployees[e.Position].Id;
             Intent intent = new Intent(this, mEmployees[e.Position].EmployeeInfoView);
             StartActivity(intent);
+            OverridePendingTransition(Resource.Animation.slide_in_left, Resource.Animation.slide_out_left);
         }
 
         // 

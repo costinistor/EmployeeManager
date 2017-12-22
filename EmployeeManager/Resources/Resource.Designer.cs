@@ -32,25 +32,37 @@ namespace EmployeeManager
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int rotate_right = 2130968576;
+			public const int obj_slide_left = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int slide_in_down = 2130968577;
+			public const int obj_slide_right = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int slide_in_right = 2130968578;
+			public const int rotate_right = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int slide_in_up = 2130968579;
+			public const int slide_in_down = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int slide_out_down = 2130968580;
+			public const int slide_in_left = 2130968580;
 			
 			// aapt resource value: 0x7f040005
-			public const int slide_out_right = 2130968581;
+			public const int slide_in_right = 2130968581;
 			
 			// aapt resource value: 0x7f040006
-			public const int slide_out_up = 2130968582;
+			public const int slide_in_up = 2130968582;
+			
+			// aapt resource value: 0x7f040007
+			public const int slide_out_down = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int slide_out_left = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int slide_out_right = 2130968585;
+			
+			// aapt resource value: 0x7f04000a
+			public const int slide_out_up = 2130968586;
 			
 			static Animation()
 			{
@@ -143,92 +155,95 @@ namespace EmployeeManager
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080010
-			public const int InfoEmployeeContainer = 2131230736;
+			// aapt resource value: 0x7f080011
+			public const int InfoEmployeeContainer = 2131230737;
 			
 			// aapt resource value: 0x7f080000
 			public const int actionBar = 2131230720;
 			
-			// aapt resource value: 0x7f080016
-			public const int btnAddEmployee = 2131230742;
-			
-			// aapt resource value: 0x7f08000d
-			public const int btnDeleteEmployee = 2131230733;
+			// aapt resource value: 0x7f080017
+			public const int btnAddEmployee = 2131230743;
 			
 			// aapt resource value: 0x7f08000e
-			public const int btnEditEmployee = 2131230734;
+			public const int btnDeleteEmployee = 2131230734;
+			
+			// aapt resource value: 0x7f08000f
+			public const int btnEditEmployee = 2131230735;
 			
 			// aapt resource value: 0x7f080002
 			public const int btnSaveEmployee = 2131230722;
 			
-			// aapt resource value: 0x7f080004
-			public const int btnSelectColor = 2131230724;
+			// aapt resource value: 0x7f080005
+			public const int btnSelectColor = 2131230725;
 			
-			// aapt resource value: 0x7f08000c
-			public const int categoryName = 2131230732;
+			// aapt resource value: 0x7f08000d
+			public const int categoryName = 2131230733;
 			
 			// aapt resource value: 0x7f080001
 			public const int createOrEditEmployee = 2131230721;
 			
-			// aapt resource value: 0x7f080011
-			public const int employeeInfoName = 2131230737;
-			
-			// aapt resource value: 0x7f08001b
-			public const int employeeName = 2131230747;
+			// aapt resource value: 0x7f080012
+			public const int employeeInfoName = 2131230738;
 			
 			// aapt resource value: 0x7f08001c
-			public const int employeeOccupation = 2131230748;
+			public const int employeeName = 2131230748;
 			
-			// aapt resource value: 0x7f080005
-			public const int inputEmployeeBirthday = 2131230725;
-			
-			// aapt resource value: 0x7f08000b
-			public const int inputEmployeeEmail = 2131230731;
-			
-			// aapt resource value: 0x7f080006
-			public const int inputEmployeeHireDate = 2131230726;
+			// aapt resource value: 0x7f08001d
+			public const int employeeOccupation = 2131230749;
 			
 			// aapt resource value: 0x7f080003
-			public const int inputEmployeeName = 2131230723;
+			public const int fieldName = 2131230723;
+			
+			// aapt resource value: 0x7f080006
+			public const int inputEmployeeBirthday = 2131230726;
+			
+			// aapt resource value: 0x7f08000c
+			public const int inputEmployeeEmail = 2131230732;
 			
 			// aapt resource value: 0x7f080007
-			public const int inputEmployeeOccupation = 2131230727;
+			public const int inputEmployeeHireDate = 2131230727;
 			
-			// aapt resource value: 0x7f08000a
-			public const int inputEmployeePhone = 2131230730;
+			// aapt resource value: 0x7f080004
+			public const int inputEmployeeName = 2131230724;
 			
 			// aapt resource value: 0x7f080008
-			public const int inputEmployeeSalary = 2131230728;
+			public const int inputEmployeeOccupation = 2131230728;
 			
-			// aapt resource value: 0x7f08001a
-			public const int linearLayout1 = 2131230746;
-			
-			// aapt resource value: 0x7f080014
-			public const int linearLayout2 = 2131230740;
-			
-			// aapt resource value: 0x7f080018
-			public const int listEmployees = 2131230744;
-			
-			// aapt resource value: 0x7f080019
-			public const int logoName = 2131230745;
-			
-			// aapt resource value: 0x7f080017
-			public const int noEmployeeInList = 2131230743;
-			
-			// aapt resource value: 0x7f08000f
-			public const int scrollView1 = 2131230735;
-			
-			// aapt resource value: 0x7f080015
-			public const int searchEmployee = 2131230741;
-			
-			// aapt resource value: 0x7f080013
-			public const int textEmployees = 2131230739;
+			// aapt resource value: 0x7f08000b
+			public const int inputEmployeePhone = 2131230731;
 			
 			// aapt resource value: 0x7f080009
-			public const int textView1 = 2131230729;
+			public const int inputEmployeeSalary = 2131230729;
 			
-			// aapt resource value: 0x7f080012
-			public const int textView2 = 2131230738;
+			// aapt resource value: 0x7f08001b
+			public const int linearLayout1 = 2131230747;
+			
+			// aapt resource value: 0x7f080015
+			public const int linearLayout2 = 2131230741;
+			
+			// aapt resource value: 0x7f080019
+			public const int listEmployees = 2131230745;
+			
+			// aapt resource value: 0x7f08001a
+			public const int logoName = 2131230746;
+			
+			// aapt resource value: 0x7f080018
+			public const int noEmployeeInList = 2131230744;
+			
+			// aapt resource value: 0x7f080010
+			public const int scrollView1 = 2131230736;
+			
+			// aapt resource value: 0x7f080016
+			public const int searchEmployee = 2131230742;
+			
+			// aapt resource value: 0x7f080014
+			public const int textEmployees = 2131230740;
+			
+			// aapt resource value: 0x7f08000a
+			public const int textView1 = 2131230730;
+			
+			// aapt resource value: 0x7f080013
+			public const int textView2 = 2131230739;
 			
 			static Id()
 			{

@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>12/22/2017 10:21:29 AM</xs:documentation>
+    <xs:documentation>12/22/2017 12:09:17 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -17626,6 +17626,7 @@
             <xs:enumeration value="@id/employeeInfoName" />
             <xs:enumeration value="@id/employeeName" />
             <xs:enumeration value="@id/employeeOccupation" />
+            <xs:enumeration value="@id/fieldName" />
             <xs:enumeration value="@id/InfoEmployeeContainer" />
             <xs:enumeration value="@id/inputEmployeeBirthday" />
             <xs:enumeration value="@id/inputEmployeeEmail" />
@@ -21020,11 +21021,15 @@
       <xs:union memberTypes="xs:string">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="@anim/obj_slide_left" />
+            <xs:enumeration value="@anim/obj_slide_right" />
             <xs:enumeration value="@anim/rotate_right" />
             <xs:enumeration value="@anim/slide_in_down" />
+            <xs:enumeration value="@anim/slide_in_left" />
             <xs:enumeration value="@anim/slide_in_right" />
             <xs:enumeration value="@anim/slide_in_up" />
             <xs:enumeration value="@anim/slide_out_down" />
+            <xs:enumeration value="@anim/slide_out_left" />
             <xs:enumeration value="@anim/slide_out_right" />
             <xs:enumeration value="@anim/slide_out_up" />
             <xs:enumeration value="@android:anim/accelerate_decelerate_interpolator" />

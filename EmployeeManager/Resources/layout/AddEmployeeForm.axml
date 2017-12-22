@@ -46,7 +46,8 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/fieldName">
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -9,13 +9,17 @@ package employeemanager.employeemanager;
 
 public final class R {
     public static final class anim {
-        public static final int rotate_right=0x7f040000;
-        public static final int slide_in_down=0x7f040001;
-        public static final int slide_in_right=0x7f040002;
-        public static final int slide_in_up=0x7f040003;
-        public static final int slide_out_down=0x7f040004;
-        public static final int slide_out_right=0x7f040005;
-        public static final int slide_out_up=0x7f040006;
+        public static final int obj_slide_left=0x7f040000;
+        public static final int obj_slide_right=0x7f040001;
+        public static final int rotate_right=0x7f040002;
+        public static final int slide_in_down=0x7f040003;
+        public static final int slide_in_left=0x7f040004;
+        public static final int slide_in_right=0x7f040005;
+        public static final int slide_in_up=0x7f040006;
+        public static final int slide_out_down=0x7f040007;
+        public static final int slide_out_left=0x7f040008;
+        public static final int slide_out_right=0x7f040009;
+        public static final int slide_out_up=0x7f04000a;
     }
     public static final class attr {
     }
@@ -37,35 +41,36 @@ public final class R {
         public static final int select_color_btn=0x7f020008;
     }
     public static final class id {
-        public static final int InfoEmployeeContainer=0x7f080010;
+        public static final int InfoEmployeeContainer=0x7f080011;
         public static final int actionBar=0x7f080000;
-        public static final int btnAddEmployee=0x7f080016;
-        public static final int btnDeleteEmployee=0x7f08000d;
-        public static final int btnEditEmployee=0x7f08000e;
+        public static final int btnAddEmployee=0x7f080017;
+        public static final int btnDeleteEmployee=0x7f08000e;
+        public static final int btnEditEmployee=0x7f08000f;
         public static final int btnSaveEmployee=0x7f080002;
-        public static final int btnSelectColor=0x7f080004;
-        public static final int categoryName=0x7f08000c;
+        public static final int btnSelectColor=0x7f080005;
+        public static final int categoryName=0x7f08000d;
         public static final int createOrEditEmployee=0x7f080001;
-        public static final int employeeInfoName=0x7f080011;
-        public static final int employeeName=0x7f08001b;
-        public static final int employeeOccupation=0x7f08001c;
-        public static final int inputEmployeeBirthday=0x7f080005;
-        public static final int inputEmployeeEmail=0x7f08000b;
-        public static final int inputEmployeeHireDate=0x7f080006;
-        public static final int inputEmployeeName=0x7f080003;
-        public static final int inputEmployeeOccupation=0x7f080007;
-        public static final int inputEmployeePhone=0x7f08000a;
-        public static final int inputEmployeeSalary=0x7f080008;
-        public static final int linearLayout1=0x7f08001a;
-        public static final int linearLayout2=0x7f080014;
-        public static final int listEmployees=0x7f080018;
-        public static final int logoName=0x7f080019;
-        public static final int noEmployeeInList=0x7f080017;
-        public static final int scrollView1=0x7f08000f;
-        public static final int searchEmployee=0x7f080015;
-        public static final int textEmployees=0x7f080013;
-        public static final int textView1=0x7f080009;
-        public static final int textView2=0x7f080012;
+        public static final int employeeInfoName=0x7f080012;
+        public static final int employeeName=0x7f08001c;
+        public static final int employeeOccupation=0x7f08001d;
+        public static final int fieldName=0x7f080003;
+        public static final int inputEmployeeBirthday=0x7f080006;
+        public static final int inputEmployeeEmail=0x7f08000c;
+        public static final int inputEmployeeHireDate=0x7f080007;
+        public static final int inputEmployeeName=0x7f080004;
+        public static final int inputEmployeeOccupation=0x7f080008;
+        public static final int inputEmployeePhone=0x7f08000b;
+        public static final int inputEmployeeSalary=0x7f080009;
+        public static final int linearLayout1=0x7f08001b;
+        public static final int linearLayout2=0x7f080015;
+        public static final int listEmployees=0x7f080019;
+        public static final int logoName=0x7f08001a;
+        public static final int noEmployeeInList=0x7f080018;
+        public static final int scrollView1=0x7f080010;
+        public static final int searchEmployee=0x7f080016;
+        public static final int textEmployees=0x7f080014;
+        public static final int textView1=0x7f08000a;
+        public static final int textView2=0x7f080013;
     }
     public static final class layout {
         public static final int addemployeeform=0x7f030000;

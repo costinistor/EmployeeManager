@@ -39,7 +39,10 @@ C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\s
 C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\slide_out_down.xml
 C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\slide_in_right.xml
 C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\slide_out_right.xml
-C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\EmployeeManager.csprojResolveAssemblyReference.cache
 C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\rotate_right.xml
+C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\slide_in_left.xml
+C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\slide_out_left.xml
+C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\obj_slide_right.xml
+C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\res\anim\obj_slide_left.xml
 C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\bin\Debug\EmployeeManager.dll.mdb
 C:\Users\Costi\source\repos\EmployeeManager\EmployeeManager\obj\Debug\android\assets\EmployeeManager.dll.mdb

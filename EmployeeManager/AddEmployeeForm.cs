@@ -25,6 +25,7 @@ namespace EmployeeManager
         ImageButton btnSaveEmployee, btnSelectColor;
         EditText inputEmployeeName, inputEmployeeBirthday, inputEmployeeHireDate, inputEmployeeOccupation, inputEmployeeSalary,
                  inputEmployeePhone, inputEmployeeEmail;
+        LinearLayout fieldName;
 
         bool editEmployee;
 
@@ -35,6 +36,7 @@ namespace EmployeeManager
             // Create your application here
             SetContentView(Resource.Layout.AddEmployeeForm);
             Views();
+            AnimateInputs();
             editEmployee = Intent.GetBooleanExtra("convertToEdit", false); // return true if button edit was clicked
             GetEmployeeInfoToEdit();
 
@@ -44,22 +46,35 @@ namespace EmployeeManager
             //CreateAnim(anim1, 0, createOrEditEmployee);
             //CreateAnim(anim2, 2000, btnSaveEmployee);
 
-            createOrEditEmployee.StartAnimation(CreateAnim(0));
-            btnSaveEmployee.StartAnimation(CreateAnim(4000));
+            
         }
 
-        Animation CreateAnim(long time)
+        Animation animation(int animId, long timeToStart)
         {
-            Animation anim = AnimationUtils.LoadAnimation(this, Resource.Animation.rotate_right);
-            anim.StartOffset = time;
+            Animation anim = AnimationUtils.LoadAnimation(this, animId);
+            anim.StartOffset = timeToStart;
             return anim;
+        }
+
+        void AnimateInputs()
+        {
+            createOrEditEmployee.StartAnimation(animation(Resource.Animation.rotate_right, 0));
+            btnSaveEmployee.StartAnimation(animation(Resource.Animation.rotate_right, 1000));
+
+            fieldName.StartAnimation(animation(Resource.Animation.obj_slide_left, 0));
+            inputEmployeeBirthday.StartAnimation(animation(Resource.Animation.obj_slide_right, 500));
+            inputEmployeeHireDate.StartAnimation(animation(Resource.Animation.obj_slide_left, 1000));
+            inputEmployeeOccupation.StartAnimation(animation(Resource.Animation.obj_slide_right, 1500));
+            inputEmployeeSalary.StartAnimation(animation(Resource.Animation.obj_slide_left, 2000));
+            inputEmployeePhone.StartAnimation(animation(Resource.Animation.obj_slide_right, 2500));
+            inputEmployeeEmail.StartAnimation(animation(Resource.Animation.obj_slide_left, 3000));
         }
 
         void GetEmployeeInfoToEdit()
         {
             if (editEmployee)
             {
-                var employeeInfo = GetRealm.realm().All<Employee>().Where(i => i.Id == MainActivity.id);
+                var employeeInfo = GetRealm.realm().All<Employee>().Where(i => i.Id == MainActivity.idEmployeeSelected);
                 foreach (var data in employeeInfo)
                 {
                     inputEmployeeName.Text = data.Name;
@@ -113,9 +128,10 @@ namespace EmployeeManager
                     // Edit the employee here
                     GetRealm.realm().Write(() =>
                     {
-                        GetRealm.realm().Add(new Employee(MainActivity.id, name, birthday, hireDate, occupation, salary, phone, email, "#C4EBE5"), update: true);      
+                        GetRealm.realm().Add(new Employee(MainActivity.idEmployeeSelected, name, birthday, hireDate, occupation, salary, phone, email, "#C4EBE5"), update: true);      
                     });
                     StartActivity(new Intent(this, typeof(EmployeeInfo)));
+                    OverridePendingTransition(Resource.Animation.slide_in_right, Resource.Animation.slide_out_right);
                 }
                 Finish();
             }
@@ -132,6 +148,7 @@ namespace EmployeeManager
             btnSaveEmployee = FindViewById<ImageButton>(Resource.Id.btnSaveEmployee);
             btnSelectColor = FindViewById<ImageButton>(Resource.Id.btnSelectColor);
 
+            fieldName = FindViewById<LinearLayout>(Resource.Id.fieldName);
             inputEmployeeName = FindViewById<EditText>(Resource.Id.inputEmployeeName);
             inputEmployeeBirthday = FindViewById<EditText>(Resource.Id.inputEmployeeBirthday);
             inputEmployeeHireDate = FindViewById<EditText>(Resource.Id.inputEmployeeHireDate);
@@ -144,10 +161,7 @@ namespace EmployeeManager
         public override void OnBackPressed()
         {
             base.OnBackPressed();
-            Intent intent = new Intent(this, typeof(MainActivity));
-            StartActivity(intent);
-            OverridePendingTransition(Resource.Animation.slide_in_down, Resource.Animation.slide_out_down);
-            Finish();
+            OverridePendingTransition(Resource.Animation.slide_in_right, Resource.Animation.slide_out_right);
         }
     }
 }

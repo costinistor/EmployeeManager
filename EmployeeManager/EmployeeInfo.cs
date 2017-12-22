@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Views.Animations;
 using EmployeeManager.Model;
 
 namespace EmployeeManager
@@ -29,7 +30,18 @@ namespace EmployeeManager
             Views();
             PrintEmployeeInfo();
 
+            btnDeleteEmployee.Click += BtnDeleteEmployee_Click;
             btnEditEmployee.Click += delegate { SendEmployeeInfoToEdit(); };
+        }
+
+        private void BtnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            var employeeId = GetRealm.realm().All<Employee>().First(i => i.Id == MainActivity.idEmployeeSelected);
+            GetRealm.realm().Write(() => { GetRealm.realm().Remove(employeeId); });
+            Intent intent = new Intent(this, typeof(MainActivity));
+            StartActivity(intent);
+            OverridePendingTransition(Resource.Animation.slide_in_right, Resource.Animation.slide_out_right);
+            Finish();
         }
 
         void SendEmployeeInfoToEdit()
@@ -37,24 +49,25 @@ namespace EmployeeManager
             Intent intent = new Intent(this, typeof(AddEmployeeForm));
             intent.PutExtra("convertToEdit", true);
             StartActivity(intent);
+            OverridePendingTransition(Resource.Animation.slide_in_up, Resource.Animation.slide_out_up);
         }
 
         void PrintEmployeeInfo()
         {
-            var employeeInfo = GetRealm.realm().All<Employee>().Where(i => i.Id == MainActivity.id);
+            var employeeInfo = GetRealm.realm().All<Employee>().Where(i => i.Id == MainActivity.idEmployeeSelected);
             foreach (var data in employeeInfo)
             {
                 employeeInfoName.Text = data.Name;
-                CreateLayoutRow("Birthday:", data.Birthday, 2);
-                CreateLayoutRow("Hire date:", data.HireDate, 3);
-                CreateLayoutRow("Occupation:", data.Occupation, 4);
-                CreateLayoutRow("Salary:", data.Salary, 5);
-                CreateLayoutRow("Phone:", data.Phone, 6);
-                CreateLayoutRow("Email:", data.Email, 7);
+                CreateLayoutRow("Birthday:", data.Birthday, 2, 0);
+                CreateLayoutRow("Hire date:", data.HireDate, 3, 500);
+                CreateLayoutRow("Occupation:", data.Occupation, 4, 1000);
+                CreateLayoutRow("Salary:", data.Salary, 5, 1500);
+                CreateLayoutRow("Phone:", data.Phone, 6, 2000);
+                CreateLayoutRow("Email:", data.Email, 7, 2500);
             }
         }
 
-        void CreateLayoutRow(string title, string data, int index)
+        void CreateLayoutRow(string title, string data, int index, long timeToStart)
         {
             LinearLayout lvContainer = new LinearLayout(this);
             lvContainer.Orientation = Orientation.Vertical;
@@ -73,11 +86,19 @@ namespace EmployeeManager
             getDataInfoRow.SetTextSize(Android.Util.ComplexUnitType.Sp, 18);
             getDataInfoRow.SetPadding(0, 0, 0, 20);
             lvContainer.AddView(getDataInfoRow);
+            getDataInfoRow.StartAnimation(animation(timeToStart));
 
             TextView lineDivider = new TextView(this);
             lineDivider.SetHeight(2);
             lineDivider.SetBackgroundColor(Android.Graphics.Color.ParseColor("#B2CBE6"));
             lvContainer.AddView(lineDivider);
+        }
+
+        Animation animation(long timeToStart)
+        {
+            Animation anim = AnimationUtils.LoadAnimation(this, Resource.Animation.obj_slide_right);
+            anim.StartOffset = timeToStart;
+            return anim;
         }
 
         void Views()
@@ -91,9 +112,9 @@ namespace EmployeeManager
         public override void OnBackPressed()
         {
             base.OnBackPressed();
-            Intent intent = new Intent(this, typeof(MainActivity));
-            StartActivity(intent);
-            FinishAffinity();
+            StartActivity(new Intent(this, typeof(MainActivity)));
+            OverridePendingTransition(Resource.Animation.slide_in_right, Resource.Animation.slide_out_right);
+            Finish();
         }
     }
 }
