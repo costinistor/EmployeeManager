@@ -1,2 +1,3 @@
 # Android app - Employee Manager
-System manegement for employees using Realm for database
+
+I built this app to learn how to implement Realm database. 
